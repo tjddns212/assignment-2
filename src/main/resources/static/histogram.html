@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/histogram.css" />
+    <script src="scripts/calculate.js" defer></script>
+    <title>Histrogram</title>
+  </head>
+  <body>
+    <header>
+      <h1>Histogram Generator</h1>
+    </header>
+    <section>
+      <div class="lower-bound">
+        <h2>Lower bounds</h2>
+        <form id="myForm">
+          <ol class="user-input">
+            <li>
+              <label for="Max">Max</label>
+              <input type="text" id="Max" name="Max" />
+            </li>
+            <li>
+              <label for="A+">A+</label> <input type="text" id="A+" name="A+" />
+            </li>
+            <li>
+              <label for="A">A</label> <input type="text" id="A" name="A" />
+            </li>
+            <li>
+              <label for="A-">A-</label> <input type="text" id="A-" name="A-" />
+            </li>
+            <li>
+              <label for="B+">B+</label> <input type="text" id="B+" name="B+" />
+            </li>
+            <li>
+              <label for="B">B</label> <input type="text" id="B" name="B" />
+            </li>
+            <li>
+              <label for="B-">B-</label> <input type="text" id="B-" name="B-" />
+            </li>
+            <li>
+              <label for="C+">C+</label> <input type="text" id="C+" name="C+" />
+            </li>
+            <li>
+              <label for="C">C</label> <input type="text" id="C" name="C" />
+            </li>
+            <li>
+              <label for="C-">C-</label> <input type="text" id="C-" name="C-" />
+            </li>
+            <li>
+              <label for="D">D</label> <input type="text" id="D" name="D" />
+            </li>
+            <li>
+              <label for="F">F</label> <input type="text" id="F" name="F" />
+            </li>
+          </ol>
+        </form>
+      </div>
+      <div class="right">
+        <div class="histogram">
+          <h2 id="title-histogram">Histrogram</h2>
+          <ol class="number-students">
+            <li>
+              <label for="">A+</label
+              ><progress id="a+" value="0" max="20"></progress
+              ><span id="A+Value">0</span>
+            </li>
+            <li>
+              <label for="">A</label
+              ><progress id="a" value="0" max="20"></progress
+              ><span id="AValue">0</span>
+            </li>
+            <li>
+              <label for="">A-</label
+              ><progress id="a-" value="0" max="20"></progress
+              ><span id="A-Value">0</span>
+            </li>
+            <li>
+              <label for="">B+</label
+              ><progress id="b+" value="0" max="20"></progress
+              ><span id="B+Value">0</span>
+            </li>
+            <li>
+              <label for="">B</label
+              ><progress id="b" value="0" max="20"></progress
+              ><span id="BValue">0</span>
+            </li>
+            <li>
+              <label for="">B-</label
+              ><progress id="b-" value="0" max="20"></progress
+              ><span id="B-Value">0</span>
+            </li>
+            <li>
+              <label for="">C+</label
+              ><progress id="c+" value="0" max="20"></progress
+              ><span id="C+Value">0</span>
+            </li>
+            <li>
+              <label for="">C</label
+              ><progress id="c" value="0" max="20"></progress
+              ><span id="CValue">0</span>
+            </li>
+            <li>
+              <label for="">C-</label
+              ><progress id="c-" value="0" max="20"></progress
+              ><span id="C-Value">0</span>
+            </li>
+            <li>
+              <label for="">D</label
+              ><progress id="d" value="0" max="20"></progress
+              ><span id="DValue">0</span>
+            </li>
+            <li>
+              <label for="">F</label
+              ><progress id="f" value="0" max="20"></progress
+              ><span id="FValue">0</span>
+            </li>
+          </ol>
+        </div>
+        <div class="grade">
+          <form id="mySubmit">
+            <label for="grade">New Grade:</label>
+            <input
+              type="number"
+              id="grade"
+              name="grade"
+              step="any"
+              min="0"
+              ,
+              max="100"
+            />
+            <button id="submit">Submit</button>
+            <div id="error"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

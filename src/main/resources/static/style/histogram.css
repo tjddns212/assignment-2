@@ -1,0 +1,85 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: 530;
+  margin: 2% 0 2% 5%;
+  font-size: 1.5rem;
+}
+h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #a62824;
+}
+.lower-bound,
+.histogram,
+.grade {
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+section {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.lower-bound {
+  background-color: #eaeff1;
+  width: 25%;
+  margin: 0 0.5rem 0 5%;
+}
+.lower-bound label {
+  display: inline-block;
+  width: 100px;
+}
+.lower-bound input {
+  width: 64px;
+  height: 20px;
+}
+.right {
+  flex-direction: column;
+  width: 25%;
+}
+.right label {
+  display: inline-block;
+  width: 5rem;
+}
+.histogram {
+  background-color: #eaeff1;
+  height: 65%;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+.grade {
+  background-color: #eaeff1;
+  height: calc(35% - 0.5rem);
+  box-sizing: border-box;
+  padding-top: 1.5rem;
+}
+.grade input {
+  width: 90px;
+  height: 20px;
+}
+ol {
+  padding-left: 20px;
+}
+.user-input li {
+  margin-bottom: 2.5vh;
+}
+.number-students li {
+  margin-bottom: 1.4vh;
+}
+li {
+  list-style: none;
+}
+progress {
+  width: 7rem;
+  margin-right: 1rem;
+}
+#error {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+}
