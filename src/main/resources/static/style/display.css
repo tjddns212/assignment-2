@@ -1,0 +1,17 @@
+span {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.student-rectangle {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  word-wrap: break-word;
+  max-height: 400px;
+}
+a {
+  text-decoration: none;
+}

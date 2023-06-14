@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information</title>
+    <link rel="stylesheet" href="../../style/studentInfo.css" />
+  </head>
+  <body>
+    <h1>Student Information</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Hair Color</th>
+        <th>GPA</th>
+        <th>Country</th>
+        <th>Actions</th>
+      </tr>
+      <tr th:each="student : ${st}">
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.weight}"></td>
+        <td th:text="${student.height}"></td>
+        <td th:text="${student.hairColor}"></td>
+        <td th:text="${student.gpa}"></td>
+        <td th:text="${student.country}"></td>
+        <td>
+          <form
+            th:action="@{/students/update/{id}(id=${student.uid})}"
+            method="post"
+          >
+            <input type="text" name="name" th:value="${student.name}" />
+            <input type="text" name="weight" th:value="${student.weight}" />
+            <input type="text" name="height" th:value="${student.height}" />
+            <input
+              type="text"
+              name="hairColor"
+              th:value="${student.hairColor}"
+            />
+            <input type="text" name="gpa" th:value="${student.gpa}" />
+            <input type="text" name="country" th:value="${student.country}" />
+            <button type="submit">Update</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <form
+      th:action="@{/students/delete/{id}(id=${st.uid})}"
+      method="post"
+      onsubmit="return confirm('Are you sure you want to delete this student?');"
+    >
+      <input type="hidden" name="_method" value="DELETE" />
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>

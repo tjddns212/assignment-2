@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student_list</title>
+    <link rel="stylesheet" href="../../style/display.css" />
+    <script src="../../scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="student-list">
+      <div th:each="student : ${st}" class="student-rectangle" th:attr="data-height=${student.height}, data-weight=${student.weight}">
+        <a th:href="@{/students/studentInfo/{uid}(uid=${student.uid})}">
+        <span class="student-name" th:text="${student.name}"></span>
+        <span class="student-name" th:text="${student.gpa}"></span>
+      </form>
+        </a>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

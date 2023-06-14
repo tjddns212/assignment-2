@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+.row {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
