@@ -42,7 +42,7 @@ public String getStudent(@PathVariable("id") int id, Model model) {
         return "students/addedStudent";
     }
 
-  @PostMapping("/students/add")
+  @PostMapping("/students/adds")
   public String addStudent(@RequestParam Map<String, String> newstudent, HttpServletResponse response){
     String newName= newstudent.get("name");
     double newWeight = Double.parseDouble(newstudent.get("weight"));
